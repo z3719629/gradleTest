@@ -1,0 +1,1 @@
+include 'EurekaServer','EurekaDiscovery','EurekaDiscoverySecond','FeignService','ZuulService','ConfigServer','ConfigClient'
