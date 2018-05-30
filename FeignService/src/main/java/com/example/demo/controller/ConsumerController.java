@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by Administrator on 2018/5/28.
  */
 @RestController
-@RefreshScope
 public class ConsumerController {
 
     @Autowired
@@ -25,6 +24,11 @@ public class ConsumerController {
     @Value("${foo}")
     String foo;
 
+    @RequestMapping(value = "/hi")
+    public String hi(){
+        return foo;
+    }
+
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public Integer add() {
         return computeClient.add(10, 20);
@@ -33,11 +37,6 @@ public class ConsumerController {
     @RequestMapping(value = "/sub", method = RequestMethod.GET)
     public Integer sub() {
         return computeClientSecond.sub(30, 20);
-    }
-
-    @RequestMapping(value = "/foo", method = RequestMethod.GET)
-    public String foo() {
-        return foo;
     }
 
 }
