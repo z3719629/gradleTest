@@ -1,1 +1,1 @@
-include 'EurekaServer','EurekaDiscovery','EurekaDiscoverySecond','FeignService','ZuulService','ConfigServer','ConfigClient'
+include 'EurekaServer','EurekaDiscovery','EurekaDiscoverySecond','FeignService','ZuulService','ConfigServer','SpringSecurity'

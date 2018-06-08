@@ -1,5 +1,6 @@
 package com.example.demo.filter;
 
+import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -20,7 +21,7 @@ public class ServiceConsumerFallbackProvider implements FallbackProvider {
 
     @Override
     public String getRoute() {
-        return "feign-consumer-b";
+        return "*";
     }
 
     @Override

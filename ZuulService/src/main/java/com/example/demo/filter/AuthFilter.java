@@ -29,7 +29,7 @@ public class AuthFilter extends ZuulFilter {
     @Override
     public boolean shouldFilter() {
         //是否执行该过滤器，true代表需要过滤
-        return true;
+        return false;
     }
 
     @Override
